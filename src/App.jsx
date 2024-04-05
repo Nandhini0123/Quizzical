@@ -13,7 +13,6 @@ function App() {
 
 
    function navigateTo(page){
-    console.log("on click navigateTo")
     setCurrentPage(page)
    }
    const receiveDataFromStart = (data) => {
@@ -23,7 +22,7 @@ function App() {
    useEffect(() => {
    if(getQuiz){
     setLoading(true)
-    const abortController = new AbortController(); // Create an AbortController
+    const abortController = new AbortController(); 
     const signal = abortController.signal;
 
     fetch(`https://opentdb.com/api.php?amount=5&category=9&difficulty=medium&type=multiple`, { signal })

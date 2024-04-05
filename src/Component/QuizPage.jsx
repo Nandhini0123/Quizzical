@@ -5,7 +5,6 @@ import '../App.css'
 export default function QuizPage(props){
     const[renderedButton, setRenderedButton] = useState(true)
     const[selectedAnswer1, setSelectedAnswer1] = useState({})
-    const[correctAnswer, setCorrectAnswer] = useState([])
     const[score, setScore] = useState(0)
     const[shuffledAnswers, setShuffledAnswers] = useState([])
 
@@ -23,8 +22,7 @@ let correct = '';
 
 // evaluating for correct answers
 function handleAnswer(option, id){
-  console.log("selectedanswer", option)
-  console.log("id", id)
+  
   correct = getCorrectAnswerById(props.questions, id)
   const answer = correct ? correct.correct_answer : null ;
   const updatedSelectedAnswers = { ...selectedAnswer1, [id]: option }; 
@@ -37,12 +35,10 @@ function handleAnswer(option, id){
       return prevScore
      }
   }) 
-   console.log(score, "scorefirst")
-   console.log(answer[0], "correctanswer")
+
 }
 
 
-//  calculating score
 
 
 //  function to get the current ID

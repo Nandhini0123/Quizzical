@@ -4,7 +4,6 @@ export default function StartPage(props){
     const handleStartQuiz = () => {
         const data = true;
         props.sendData("Data from child component", data);
-        // Navigate to QuizPage
         props.handleClick();
     };
     return(

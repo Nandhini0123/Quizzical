@@ -27,23 +27,23 @@
   border: 1px solid #4b4949;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #d0c4ef; /* Default button color */
+  background-color: #d0c4ef; 
 }
 
-/* Hide the actual radio buttons */
+
 .answer input[type="radio"] {
   display: none;
 }
 
-/* Style for when radio button input is checked */
+
 .answer input[type="radio"]:checkbox + .answer {
-  background-color: #58f1a9; /* Change to your desired color */
+  background-color: #58f1a9; 
   color: #535050;
 }
 
 /* Hover effect */
 .answer label:hover {
-  background-color: #f18256; /* Change to your desired hover color */
+  background-color: #f18256; 
 }
 .allAnswers{
   display:flex; 
