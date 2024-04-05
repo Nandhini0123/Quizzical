@@ -1,0 +1,88 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+.quesAndAns{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(199, 193, 193);
+}
+.question{
+  font-size: large;
+  font-weight: bolder;
+}
+
+.buttons{
+  background-color: rgb(227, 144, 144);
+  margin: 1rem;
+}
+
+.answer {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border: 1px solid #4b4949;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #d0c4ef; /* Default button color */
+}
+
+/* Hide the actual radio buttons */
+.answer input[type="radio"] {
+  display: none;
+}
+
+/* Style for when radio button input is checked */
+.answer input[type="radio"]:checkbox + .answer {
+  background-color: #58f1a9; /* Change to your desired color */
+  color: #535050;
+}
+
+/* Hover effect */
+.answer label:hover {
+  background-color: #f18256; /* Change to your desired hover color */
+}
+.allAnswers{
+  display:flex; 
+  flex-direction: row;
+  column-gap: 8px;
+  justify-content: center;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
